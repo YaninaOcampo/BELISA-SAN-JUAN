@@ -1,0 +1,223 @@
+*{ 
+    box-sizing: border-box;
+}
+body{
+       margin: 0 10px; /* Margen horizontal entre elementos */
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;    
+    font-size: 20px; /* Cambia el tamaño de la letra a 16px */
+
+}
+img {
+    border-radius: .190px;
+    margin: 1px;
+    height: 10px;
+    border-radius: 200px; /* Esquinas redondeadas */
+}
+
+header{
+    padding: 0 50px;
+    text-align: right;
+    background-image: url(../img/21.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-left: 10px;
+}
+
+header div {
+    background-color: rgba(243, 240, 236, 0.425);
+    padding: 10px 10px;
+    border-radius: 5px;
+    color: rgb(19, 18, 18);
+    font-size: 1em;
+    height: 95vh;
+}
+header h1{
+    font-size: 30px;
+    margin: 20 20 20 px;
+    padding-left: 20px;   /* Espacio en el lado izquierdo */
+
+}
+header p {
+    margin: 0 0 20px;
+    font-size: 20px; /* Cambia el tamaño de la letra a 16px */
+    
+
+}
+/* Contenedor para los recuadros */
+.recursos-container {
+    display: flex; /* Usar flexbox */
+    justify-content: space-around; /* Espacia los recuadros de manera uniforme */
+    flex-wrap: wrap; /* Permitir que los recuadros se ajusten en varias líneas */
+}
+
+/* Estilo de cada recuadro */
+.recuadro {
+    background-color: #fff; /* Color de fondo blanco */
+    border: 1px solid #d3a50f; /* Borde gris claro */
+    border-radius: 10px; /* Esquinas redondeadas */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra para dar profundidad */
+    margin: 10px; /* Espaciado entre recuadros */
+    padding: 10px; /* Espaciado interno */
+    width: 30%; /* Ancho de cada recuadro */
+    box-sizing: border-box; /* Incluir padding y borde en el ancho total */
+    transition: transform 0.3s; /* Transición suave al interactuar */
+    height: 250px; /* Ajusta según lo necesario */
+}
+
+/* Efecto al pasar el ratón sobre los recuadros */
+.recuadro:hover {
+    transform: translateY(-5px); /* Eleva el recuadro al pasar el ratón */
+}
+
+/* Estilo del texto dentro de los recuadros */
+h3 {
+    color: #c99d24; /* Color del título dentro del recuadro */
+}
+
+.menu, .row{
+    justify-content: center;
+    background-color: rgb(223, 142, 22);
+}
+.menu a{
+    color: rgb(7, 7, 7);
+    padding:0px 10px;
+    text-decoration: none; 
+    text-align: center;
+    text-transform: uppercase;
+    box-shadow: 2px 2px 10px rgb(14, 13, 13);
+}
+
+.banner {
+padding: 0 50px;
+height: 100vh;
+background-size: cover;
+background-position: center;
+justify-content: center;
+    
+}
+
+@media screen and (min-width: 52em) {
+    .centrado {
+        margin: 0 auto;
+        padding: 0 .6em;
+    }   
+} /*fin media*/
+
+h1 {
+    margin: 0 0 2em;
+    padding: 1em 0;
+    font-weight: 300;
+    color: #0c0101;
+    justify-content: center;
+}
+.tarjeta:hover {
+    transform: scale(1.05); /* Efecto de ampliación al pasar el ratón */
+}
+.tarjeta a {
+    color: rgb(237, 223, 204);
+    text-decoration: none;
+}
+
+.tarjeta a:hover {
+    text-shadow: 3px 3px 8px rgb(204, 106, 20),
+}
+
+.tarjeta-container h2 {
+    margin-top: 0;
+    margin-bottom: .5em;
+    font-weight: normal;
+}
+
+.tarjeta-container p {
+    font-size: 95%;
+    justify-content: center;
+    display: flex; /* Usar flexbox para las tarjetas */
+    flex-wrap: wrap; /* Permitir que los elementos se envuelvan */
+    justify-content: space-between
+}
+  
+
+img {
+    display: center;
+    border: 0;
+    width: 20%;
+    height: auto;
+}
+.tarjeta:hover h2,
+.tarjeta:hover p {
+    opacity: 1; /* Hazlo visible */
+    transform: translateY(0); /* Mueve el texto a su posición original */
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .tarjeta {
+        width: 3%; /* En pantallas pequeñas, cada tarjeta ocupa el 100% del contenedor */
+    }
+}
+
+/*Aca empezamos el Flex*/
+
+.tarjeta {
+    margin: 5px;
+    width: 30%;
+    opacity: 0.85;
+    border: 1px solid #d3a50f; /* Borde gris claro */
+    border-radius: 50px; /* Esquinas redondeadas */
+    background-color: #fff; /* Color de fondo blanco */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra para dar profundidad */
+    padding: 20px; /* Espaciado interno */
+    box-sizing: border-box; /* Incluir padding y borde en el ancho total */
+    transition: transform 0.3s; /* Transición suave al interactuar */
+}
+.tarjeta img {
+    width: 100%; /* Ancho al 100% del contenedor de la tarjeta */
+    height: auto; /* Mantiene la proporción de la imagen */
+    max-height: 250px; /* Establece una altura máxima para todas las imágenes */
+    object-fit: contain; /* Corta la imagen si es necesario para mantener la proporción */
+}
+.tarjeta-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start; /* O space-between si quieres un poco de espacio entre las tarjetas */
+}
+.tarjeta:last-child {
+    margin-left: auto;
+    margin-right: auto; /* Centra la última tarjeta en la fila */
+}
+
+/* Footer */
+.footer {
+    padding: 20px 0; /* Espaciado alrededor del contenido */
+    text-align: center; /* Centrar el texto */
+    font-size: 14px; /* Tamaño de fuente */
+    position: relative; /* Posicionamiento relativo */
+    width: 100%; /* Ancho total */
+    background-color: #94571f; /* Color de fondo del footer */
+    color: #0c0c0c; /* Color del texto */
+}
+
+.footer::before {
+    content: ''; /* Asegura que el pseudo-elemento se renderice */
+    display: block; /* Muestra como un bloque */
+    height: 5px; /* Altura de la banda de color */
+    background-color: #97ad35; /* Color de la banda */
+    position: absolute; /* Posicionamiento absoluto */
+    top: 0; /* Coloca la banda en la parte superior del footer */
+    left: 0; /* Alinea a la izquierda */
+    width: 100%; /* Ancho total */
+    
+}
+
+.social-links {
+    list-style: none; /* Sin viñetas */
+    display: flex; /* Usar flexbox para alinear horizontalmente */
+    justify-content: center; /* Centrar el contenido */
+    padding: 0; /* Sin padding */
+}
+
+.social-links li {
+    margin: 0 10px; /* Margen horizontal entre elementos */
+}
+
